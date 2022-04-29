@@ -1,19 +1,16 @@
 <?php 
 include './db.php';
 
-//$cont1 = $c1_r;
-
 if(isset($_POST['eng'])) {
-    $cont1 = $c1_r;
-    $cont2 = $c2_r;
-    $cont3 = $c3_r;
-    $cont4 = $c4_r;
+    $id_lang = 1;
 } elseif(isset($_POST['rus'])) {
-    $cont1 = $c1_e;
-    $cont2 = $c2_e;
-    $cont3 = $c3_e;
-    $cont4 = $c4_e;
-}
+    $id_lang = 2;
+};
+
+$cont1 = getDB('cont_1', $id_lang);
+$cont2 = getDB('cont_2', $id_lang);
+$cont3 = getDB('cont_3', $id_lang);
+$cont4 = getDB('cont_4', $id_lang);
 
 ?>
 
@@ -38,7 +35,6 @@ if(isset($_POST['eng'])) {
                     <input type="submit" name="eng" value="RUS">
                 </form>
 
-                
                 <!-- <button>DARK</button> -->
             </div>
     </header>
@@ -48,24 +44,34 @@ if(isset($_POST['eng'])) {
         </div>
         <div class="img_bar"></div>
     </div>
+    <hr color="black">
     <div class="container2">
+        <div class="images">
+            <img src="./images/docker.png">
+            <img src="./images/php.png">
+            <img src="./images/css.png">
+            <img src="./images/sql.png">
+            <img src="./images/html.png">
+        </div>
         <div class="text2">
             <h1><?=$cont2?></h1>
         </div>
     </div>
     <div class="container3">
-        <div class="text2">
+        <div class="text3">
             <h1><?=$cont3?></h1>
+        </div>
+        <div class="donat">
+
         </div>
     </div>
     <div class="container4">
-        <div class="text2">
+        <div class="text4">
             <h1>ⓒRnDX2 2022  All rights reserved</h1>
             <h1><?=$cont4?></h1>
         </div>
     </div>
 <div class="intro"></div>
-    
 
     <!-- <script src="./script.js"> -->
 </body>
