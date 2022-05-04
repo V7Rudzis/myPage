@@ -81,7 +81,7 @@ input {
 }
 
 .container2 {
-    background-image: url(/images/cont2.jpg);
+    background-image: url(/images/cont2.jpeg);
     min-height: 900px;
     display: flex;
     align-items: center;
@@ -129,7 +129,7 @@ input {
     background-color: rgb(250, 248, 251);
     height: 70px;
     display: flex;
-    justify-content: row;
+    justify-content: center;
 }
 
 .text4 {

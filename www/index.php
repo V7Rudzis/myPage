@@ -1,6 +1,8 @@
 <?php 
 include './db.php';
 
+$id_lang = 1;
+
 if(isset($_POST['eng'])) {
     $id_lang = 1;
 } elseif(isset($_POST['rus'])) {
@@ -57,14 +59,16 @@ $cont4 = getDB('cont_4', $id_lang);
             <h1><?=$cont2?></h1>
         </div>
     </div>
+    <hr color="black">
     <div class="container3">
         <div class="text3">
             <h1><?=$cont3?></h1>
         </div>
         <div class="donat">
-
+        <iframe src="https://widget.qiwi.com/widgets/big-button-220x100?publicKey=48e7qUxn9T7RyYE1MVZswX1FRSbE6iyCj2gCRwwF3Dnh5XrasNTx3BGPiMsyXQFNKQhvukniQG8RTVhYm3iPpZL6tKcPBHsFrLLRgp2QiVdaUuK132fTrtGctPJKgvewTXQd5Lk7ZHbKk9A3wxXTRRV1HUDzaXEoRAT1mZsTVroUh42WTV4ZRBHm2Zd3z&noCache=true" width="220" height="100"allowTransparency="true" scrolling="no" frameBorder="0"></iframe>
         </div>
     </div>
+    <hr color="black">
     <div class="container4">
         <div class="text4">
             <h1>ⓒRnDX2 2022  All rights reserved</h1>
