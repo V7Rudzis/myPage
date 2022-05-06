@@ -153,3 +153,34 @@ input {
     flex-direction: column;
 }
 
+.donat {
+    justify-content: center;
+    color: black;
+}
+
+.usd_btn {
+    height: 24px;
+    border-radius: 5px;
+    width: 56px;
+}
+
+.usd {
+    width: 50px;
+    border-radius: 5px;
+}
+
+.donat_cont {
+    background-color: rgb(255, 204, 0);
+    height: 200px;
+    width: 600px;
+    border-radius: 20px;
+    border: 2px solid black;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+}
+
+.pay {
+    display: flex;
+    justify-content: center;
+}

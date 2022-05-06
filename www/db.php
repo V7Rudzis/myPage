@@ -1,5 +1,5 @@
   <?php
-    
+  
     function getDB ($table, $id) {
       $mysql = new mysqli('mysql', 'root', 'test', 'NewDB');
       $mysql->query("SET NAMES 'utf8'");
