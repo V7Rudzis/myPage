@@ -3,7 +3,7 @@
 include './db.php';
 include './qiwi.php';
 include './qiwi2.php';
-include './create.php';
+include './key.php';
 
 $id_lang = 1;
 
@@ -73,12 +73,12 @@ $cont4 = getDB('cont_4', $id_lang);
                 <h2>Give me money(RUB)</h2>
                 <form method="post" class="pay">
                     <p><input name="val_usd" class="usd" type="number" min="1" /></p>
-                    <input class="usd_btn "type="submit" name="" value="GO">
+                    
                     <?php $usd = htmlspecialchars($_POST['val_usd']);
                     $par = gen_password();
                     
-
                     ?>
+                    <input class="usd_btn "type="submit" name="GO" value="GO">
                 </form>
             </div>
         </div>
@@ -100,30 +100,26 @@ $cont4 = getDB('cont_4', $id_lang);
 
 
 <?php
-function gen_password($length = 8)
-{				
-	$chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-	return substr(str_shuffle($chars), 0, $length);
-}
-
-const SECRET_KEY = 'eyJ2ZXJzaW9uIjoiUDJQIiwiZGF0YSI6eyJwYXlpbl9tZXJjaGFudF9zaXRlX3VpZCI6ImNsYzRtYy0wMCIsInVzZXJfaWQiOiI3OTI4OTA3MzM5MiIsInNlY3JldCI6Ijc0ZjRjYzMxNDE2MjFkMzk4YjhjZDg4YTQxZjYzNDAzZTJkMTQwNDZhOGIxY2IzMjhkYmFmNjFlYzNhMGY1MzUifX0=';
 
 $billPayments = new Qiwi\Api\BillPayments(SECRET_KEY);
 
-$publicKey = '48e7qUxn9T7RyYE1MVZswX1FRSbE6iyCj2gCRwwF3Dnh5XrasNTx3BGPiMsyXQFNKQhvukniQG8RTVhYm3iPpZL6tKcPBHsFrLLRgp2QiVdaUuK132fTrtGctPJKgvewTXQd5Lk8whPvGX5QKShpCtPbjjtnAKucG2SBUcM9UVVhQLiqYYTbS2kF5q6oM';
 $params = [
   'publicKey' => $publicKey,
   'amount' => $usd,
   'billId' => $par
 ];
 
-/** @var \Qiwi\Api\BillPayments $billPayments */
 $link = $billPayments->createPaymentForm($params);
+global $link;
 
 echo $link;
 
-// header('Location:'.$link);
-// die;
+if(isset($_POST['GO'])) {
+    echo "<script>self.location=$link;</script>";
+}
+
 
 
 ?>
+
+<a href="<?php echo $link?>">Ссылка</a>
