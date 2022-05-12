@@ -82,7 +82,7 @@ input {
 
 .container2 {
     background-image: url(/images/cont2.jpeg);
-    min-height: 900px;
+    min-height: 1100px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
