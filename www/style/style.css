@@ -23,6 +23,10 @@ input {
     margin-right: 5px;
 }
 
+.btn_eng {
+    cursor: pointer;
+}
+
 .header {
     background-color: rgb(250, 248, 251);
     padding: 10px 30px 10px 30px;
@@ -45,6 +49,7 @@ input {
     text-transform: uppercase;
     color: black;
     margin: 0 10px 0 10px;
+    
 }
 
 .container1, .container2, .container3, .container4{
@@ -63,7 +68,7 @@ input {
     margin-top: 100px;
     padding: 0 10px 0 10px;
     height: 300px;
-    width: 200px;
+    width: 400px;
     background-color: rgba(47, 84, 130, 0.908);
     color: white;
     font-size: 10px;

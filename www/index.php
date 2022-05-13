@@ -15,13 +15,13 @@ include './db.php';
 </head>
 <body>
     <header class="header">
-            <h1 href="#container1">MyPage</h1>
+            <h1>MyPage</h1>
             <div class="nav">
                 <a class="nav_link" href="#container2">Сервисы</a>
                 <a class="nav_link" href="#container3">Донаты</a>
                 <form method="post" action="">
-                    <input type="submit" name="rus" value="ENG">
-                    <input type="submit" name="eng" value="RUS">
+                    <input class="btn_eng" type="submit" name="rus" value="ENG">
+                    <input class="btn_eng" type="submit" name="eng" value="RUS">
                 </form>
             </div>
     </header>
@@ -29,7 +29,7 @@ include './db.php';
         <div class="text1">
             <h1><?=$cont1?></h1>
         </div>
-        <div class="img_bar"></div>
+        
     </div>
     <hr color="black">
     <div class="container2" id="container2">
@@ -69,8 +69,6 @@ include './db.php';
     </div>
 
 <script src="script.js"></script>
-
-
 
 </body>
 </html>
