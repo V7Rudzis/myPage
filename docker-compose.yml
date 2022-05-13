@@ -1,5 +1,13 @@
 version: "3.8"
 services:
+  traefik:
+    image: "traefik:v2.6"
+    container_name: "traefik"
+    command:
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--providers.docker.exposedbydefault=false"
+      - "--entrypoints.web.address=:80"
   php-apache:
     build:
       context: .
