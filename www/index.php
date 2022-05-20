@@ -1,6 +1,8 @@
 <?php 
 
 include './db.php';
+include './config.php';
+include './jopa.php';
 
 ?>
 
@@ -11,7 +13,7 @@ include './db.php';
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boobs!</title>
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./src/style/style.css">
 </head>
 <body>
     <header class="header">
@@ -34,12 +36,12 @@ include './db.php';
     <hr color="black">
     <div class="container2" id="container2">
         <div class="images">
-            <img src="./images/docker.png">
-            <img src="./images/php.png">
-            <img src="./images/js.png">
-            <img src="./images/sql.png">
-            <img src="./images/css.png">
-            <img src="./images/html.png">
+            <img src="./src/images/docker.png">
+            <img src="./src/images/php.png">
+            <img src="./src/images/js.png">
+            <img src="./src/images/sql.png">
+            <img src="./src/images/css.png">
+            <img src="./src/images/html.png">
         </div>
         <div class="text2">
             <h1><?=$cont2?></h1>

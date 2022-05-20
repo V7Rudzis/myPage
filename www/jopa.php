@@ -1,5 +1,7 @@
 <?php
 
+// include_once __DIR__ . '/vendor/qiwi/bill-payments-php-sdk/src/BillPayments.php';
+// include_once __DIR__ . '/vendor/qiwi/bill-payments-php-sdk/src/BillPaymentsException.php';
 include_once './qiwi.php';
 include_once './qiwi2.php';
 include_once './key.php';
